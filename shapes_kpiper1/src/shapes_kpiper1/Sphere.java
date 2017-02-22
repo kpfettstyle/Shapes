@@ -9,31 +9,31 @@ package shapes_kpiper1;
  */
 public class Sphere extends Shape{
 	
-	// establish Sphere's radius
 	
-	private float sphereRadius;
+	private float radius = 0.0f;
 	
-	public Sphere(){
-		this(0);
+	public float getRadius() {
+		return radius;
+	}
+
+	public void setRadius(float width) {
+		this.radius = radius;
+	}
+
+	public Sphere(Dialog dialog) {
+		super(dialog);
 	}
 	
-	public Sphere(float sphereRadius){
-		this.sphereRadius = sphereRadius;
-	}
-	
-	// Calculate the surface area and the volume of the Sphere
-	
-	@Override
 	public float surfaceArea() {
-		// A = 4piR^2
-		return (float) (4 * Math.PI * Math.pow(sphereRadius, 2));	
-		}
+		return -1.0f;
+	}
 	
-	@Override
 	public float volume() {
-		// V = (4/3)*piR^3
-		return (float) ((4 / 3) * Math.PI * Math.pow(sphereRadius, 3));
-		
+		return -1.0f;
+	}
+	
+	public void render() {
+		getDialog().show("Ima Message Box", "Yay messages!");
 	}
 
 }

@@ -10,33 +10,49 @@ package shapes_kpiper1;
  */
 public class Cuboid extends Shape {
 	
-	// Establish Cuboid's width, height, and depth
+	private float width = 0.0f;
+	private float height = 0.0f;
+	private float depth = 0.0f;
 	
-	private float cuboidWidth, cuboidHeight, cuboidDepth;
-	
-	public Cuboid() {
-		this(0,0,0);
+	public float getWidth() {
+		return width;
 	}
-	public Cuboid(float cuboidWidth, float cuboidHeight, float cuboidDepth) {
-		this.cuboidWidth = cuboidWidth;
-		this.cuboidHeight = cuboidHeight;
-		this.cuboidDepth = cuboidDepth;
+
+	public void setWidth(float width) {
+		this.width = width;
+	}
+
+	public float getHeight() {
+		return height;
+	}
+
+	public void setHeight(float height) {
+		this.height = height;
+	}
+
+	public float getDepth() {
+		return depth;
+	}
+
+	public void setDepth(float depth) {
+		this.depth = depth;
 	}
 	
-	
-	// Calculate Cuboid's surface area and volume.
-	@Override
-	public float surfaceArea(){
-		//SA = 2 ( W + H + D) 
-		return 2 * (cuboidWidth + cuboidHeight + cuboidDepth);
+	public Cuboid(Dialog dialog) {
+		super(dialog);
 	}
 	
-	@Override
-	public float volume(){
-		// V = (D x H x W)
-		
-		return (cuboidDepth * cuboidHeight * cuboidWidth);
+	public float surfaceArea() {
+		return -1.0f;
 	}
-		
+	
+	public float volume() {
+		return -1.0f;
+	}
+	
+	public void render() {
+		getDialog().show("Ima Message Box", "Yay messages!");
+	}
+
 	
 }

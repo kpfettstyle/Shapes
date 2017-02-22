@@ -3,41 +3,46 @@
  */
 package shapes_kpiper1;
 
+
 /**
  * @author piper
  *
  */
 public class Cylinder extends Shape {
 	
-	// Establish Cylindeer's radius and height
-	private  float cylinderRadius;
-	private float cylinderHeight;
+	private float radius = 0.0f;
+	private float height = 0.0f;
 	
-	public Cylinder() {
-		this(0, 0);
+	public float getRadius() {
+		return radius;
+	}
+
+	public void setRadius(float width) {
+		this.radius = radius;
+	}
+
+	public float getHeight() {
+		return height;
+	}
+
+	public void setHeight(float height) {
+		this.height = height;
 	}
 	
-	public Cylinder(float cylinderRadius, float cylinderHeight) {
-		this.cylinderRadius = cylinderRadius;
-		this.cylinderHeight = cylinderHeight;
-		
+	public Cylinder(Dialog dialog) {
+		super(dialog);
 	}
 	
-	
-	// Calculate Cylinder's Surface Area and Volume
-	@Override
 	public float surfaceArea() {
-		// SA = (2pi * R * H) + (2pi * R^2)
-		return (float) ((2 * Math.PI * cylinderRadius * cylinderHeight)+(2 * Math.PI * Math.pow(cylinderRadius, 2)));
-		
+		return -1.0f;
 	}
 	
-	@Override
 	public float volume() {
-		// V = pi * R^2 * H
-		return (float) (Math.PI * Math.pow(cylinderRadius, 2) * cylinderHeight);
+		return -1.0f;
 	}
 	
-	
-	
+	public void render() {
+		getDialog().show("Ima Message Box", "Yay messages!");
+	}
+
 }
