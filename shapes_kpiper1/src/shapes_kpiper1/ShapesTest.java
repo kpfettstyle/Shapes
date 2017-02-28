@@ -19,5 +19,11 @@ public class ShapesTest {
 		cuboid.render();
 		cylinder.render();
 		sphere.render();
+		
+		// Make a shapes factory
+		ShapesFactory shapesFactory = new ShapesFactory();
+		
+		
+		
 	}
 }

@@ -17,7 +17,7 @@ public class Cylinder extends Shape {
 		return radius;
 	}
 
-	public void setRadius(float width) {
+	public void setRadius(float radius) {
 		this.radius = radius;
 	}
 
