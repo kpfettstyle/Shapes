@@ -2,18 +2,31 @@ package shapes_kpiper1;
 
 public class ShapesFactory {
 	
+	//Create a dialog for the shapes to use
+	private Dialog dialog;
 	
-
-	public Shape makeCuboid(Dialog dialog) {
-		return new Cuboid(dialog);
+	private Dialog getDialog() {
+		return dialog;
 	}
 	
-	public Shape makeCylinder(Dialog dialog) {
-		return new Cylinder(dialog);
+	private void setDialog(Dialog dialog) {
+		this.dialog = dialog;
 	}
 	
-	public Shape makeSphere(Dialog dialog) {
-		return new Sphere(dialog);
+	public void ShapeFactory(Dialog dialog) {
+		setDialog(dialog);
+		getDialog();
 	}
 	
+	public Cuboid makeCuboid(float height, float width, float depth) {
+		return new Cuboid(dialog, height, width, depth);
+	}
+	
+	public Cylinder makeCylinder(float radius, float height) {
+		return new Cylinder(dialog, radius, height);
+	}
+	
+	public Sphere makeSphere(float radius) {
+		return new Sphere(dialog, radius);
+	}
 }
